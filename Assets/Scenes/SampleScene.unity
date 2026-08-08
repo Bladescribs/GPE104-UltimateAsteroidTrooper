@@ -261,6 +261,7 @@ MonoBehaviour:
   maxX: 5
   maxY: 5
   teleportKey: 116
+  quitKey: 27
 --- !u!114 &977936708
 MonoBehaviour:
   m_ObjectHideFlags: 0
