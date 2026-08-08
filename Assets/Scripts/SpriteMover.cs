@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Diagnostics;
 
 public class SpriteMover : MonoBehaviour
 {
@@ -9,12 +10,14 @@ public class SpriteMover : MonoBehaviour
 
     public KeyCode teleportKey;
 
+    public KeyCode quitKey;
+
     private Transform tf; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        tf = transform; 
+        tf = transform;
     }
 
     // Update is called once per frame
@@ -28,6 +31,11 @@ public class SpriteMover : MonoBehaviour
             Vector3 newPosition = new Vector3(randomX, randomY, 0);
 
             tf.position = newPosition; 
+        }
+
+        if (Input.GetKeyDown(quitKey))
+        {
+            Application.Quit();
         }
     }
 }
