@@ -10,6 +10,7 @@ public class PlayerController : Controller
     public KeyCode downLocal;
     public KeyCode leftLocal;
     public KeyCode rightLocal;
+    public KeyCode LeftShift;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void Start()
@@ -25,6 +26,24 @@ public class PlayerController : Controller
 
     public void MakeDecisions()
     {
+        if (Input.GetKeyDown(teleportKey))
+        {
+            // Tell the pawn to teleport randomly
+            pawn.Teleport();
+        }
+
+        if (Input.GetKeyDown(LeftShift))
+        {
+            // Tell the pawn to speed up
+            pawn.EnableTurbo();
+        }
+
+        if (Input.GetKeyUp(LeftShift))
+        {
+            // Tell the pawn to stop speeding
+            pawn.DisableTurbo();
+        }
+
         if (Input.GetKey(upLocal))
         {
             // Tell the pawn to move up

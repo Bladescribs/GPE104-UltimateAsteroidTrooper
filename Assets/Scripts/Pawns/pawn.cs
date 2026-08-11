@@ -26,4 +26,10 @@ public abstract class pawn : MonoBehaviour
 
     public abstract void RotateClockwise();
 
+    public abstract void Teleport();
+
+    public abstract void EnableTurbo();
+
+    public abstract void DisableTurbo();
+
 }

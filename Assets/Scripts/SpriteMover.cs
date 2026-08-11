@@ -30,7 +30,9 @@ public class SpriteMover : MonoBehaviour
 
             Vector3 newPosition = new Vector3(randomX, randomY, 0);
 
-            tf.position = newPosition; 
+            tf.position = newPosition;
+
+            Debug.Log("Testing");
         }
 
         if (Input.GetKeyDown(quitKey))

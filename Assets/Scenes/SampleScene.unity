@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
   theRenderer: {fileID: 0}
-  customColor: {r: 0, g: 0, b: 0, a: 0}
+  customColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!212 &977936709
 SpriteRenderer:
   serializedVersion: 2
@@ -332,6 +332,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StarShipPawn
   moveSpeed: 5
   rotateSpeed: 360
+  minX: -5
+  minY: -5
+  maxX: 5
+  maxY: 5
+  tX: 10
 --- !u!1 &1168741630
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +373,7 @@ MonoBehaviour:
   downLocal: 115
   leftLocal: 97
   rightLocal: 100
+  LeftShift: 304
 --- !u!4 &1168741632
 Transform:
   m_ObjectHideFlags: 0
